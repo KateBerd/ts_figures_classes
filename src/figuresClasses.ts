@@ -19,7 +19,7 @@ export class Triangle implements Figure {
     const sumOfOthers: number = this.a + this.b + this.c - maxSide;
 
     if (this.a <= 0 || this.b <= 0 || this.c <= 0 || maxSide >= sumOfOthers) {
-      throw new Error('Invalid triangle: each side must be greater than 0, and the sum of any two sides must be greater than the third');
+      throw new Error('Invalid triangle');
     }
   }
 
