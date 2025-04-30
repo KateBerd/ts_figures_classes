@@ -19,7 +19,7 @@ export class Triangle implements Figure {
     const sumOfOthers: number = this.a + this.b + this.c - maxSide;
 
     if (this.a <= 0 || this.b <= 0 || this.c <= 0 || maxSide >= sumOfOthers) {
-      throw new Error('your error message');
+      throw new Error('Invalid triangle: each side must be greater than 0, and the sum of any two sides must be greater than the third');
     }
   }
 
@@ -41,7 +41,7 @@ export class Circle implements Figure {
     public a: number,
   ) {
     if (this.a <= 0) {
-      throw new Error('your error message');
+      throw new Error('Circle radius must be a positive number');
     }
   }
 
@@ -61,7 +61,7 @@ export class Rectangle implements Figure {
     public b: number,
   ) {
     if (this.a <= 0 || this.b <= 0) {
-      throw new Error('your error message');
+      throw new Error('Rectangle sides must be positive numbers');
     }
   }
 
